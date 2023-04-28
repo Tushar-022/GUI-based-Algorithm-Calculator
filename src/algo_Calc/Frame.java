@@ -1,7 +1,11 @@
 package algo_Calc;
+import java.awt.Color;
 import java.awt.EventQueue;
-
-import javax.swing.JFrame;
+import java.awt.*;
+import java.io.*;
+import javax.swing.*;
+import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
@@ -39,10 +43,32 @@ public class Frame {
 	private void initialize() {
 		Sortingss obj = new Sortingss();
 		frame = new JFrame();
-		frame.setBounds(100, 100, 456, 324);
+		frame.setBounds(200, 200, 900, 700);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.setResizable(false);
 		frame.getContentPane().setLayout(null);
+		JPanel contentPane = new JPanel(){
+            public void paintComponent(Graphics g) {
+                Image image = new ImageIcon("Background1.png").getImage();
+                g.drawImage(image, 0, 0, null);
+            }
+        };
+        frame.setContentPane(contentPane);
+        contentPane.setLayout(null);
+
+		JLabel l;
+		l=new JLabel();
+		l.setText("Algorithm Calculator");
+		l.setBounds(200, 20, 100, 10);
+		l.setForeground(Color.BLUE);
+	//	frame.getContentPane().add(l);
+
+
 		
+		// JLabel label = new JLabel();
+        //  ImageIcon imageIcon = new ImageIcon("Background1.png");
+        //   label.setIcon(imageIcon);
+		// frame.getContentPane().add(label);
 		JButton btnNewButton = new JButton("Bubble Sort");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

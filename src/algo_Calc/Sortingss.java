@@ -207,11 +207,16 @@ public class Sortingss {
 		frame.setBounds(100, 100, 514, 329);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
+		frame.getContentPane().setBackground(Color.getColor(tname));
+		System.setProperty("myColor", "");
+		Color myColor = Color.getColor("myColor");          
+	
+		//System.out.println(myColor);
 		
 		JTextArea textArea_1 = new JTextArea();
 		textArea_1.setFont(new Font("Arial", Font.BOLD, 26));
-		textArea_1.setBackground(Color.DARK_GRAY);
-		textArea_1.setForeground(Color.WHITE);
+		textArea_1.setBackground(Color.GREEN);
+		textArea_1.setForeground(Color.BLUE);
 		textArea_1.setBounds(102, 0, 304, 41);
 		frame.getContentPane().add(textArea_1);
 		

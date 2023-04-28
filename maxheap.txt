@@ -1,4 +1,6 @@
 // Java program for implementation of Heap Sort 
+Time Complexity: O(N log N)
+Auxiliary Space: O(1)
 public class HeapSort 
 { 
 	public void sort(int arr[]) 
